@@ -6,7 +6,7 @@ function SelectedSkipDetails({ skip, setSelectedSkip }) {
           {/* Selected Skip Description */}
           <div className="w-full mb-2">
             <h4 className='font-bold'>Selected Skip</h4>
-            <div className="flex items-center bg-gray-600 p-4 rounded shadow-lg md:w-1/2">
+            <div className="flex items-center bg-gray-600 p-4 rounded shadow-lg md:w-full">
               <img
                 src={`https://yozbrydxdlcxghkphhtq.supabase.co/storage/v1/object/public/skips/skip-sizes/${skip.size}-yarder-skip.jpg`}
                 alt={skip.size}
@@ -26,25 +26,27 @@ function SelectedSkipDetails({ skip, setSelectedSkip }) {
           </div>
 
           {/* Continue Button */}
-          <div className='ml-auto flex gap-4'>
-            <button
-              className='cursor-pointer bg-gray-500 text-white px-6 py-2 rounded shadow hover:bg-gray-400 transition-colors w-1/2'
-              onClick={() => setSelectedSkip(null)}
-            >
-              Back
-            </button>
-            <button
-              className='cursor-pointer bg-yellow-500 text-white px-6 py-2 rounded shadow hover:bg-yellow-600 transition-colors w-1/2'
-              onClick={() => alert(`Proceeding with ${skip.size} Yard Skip`)}
-            >
-              Continue
-            </button>
+          <div className='md:ml-4 md:pb-5'>
+            <div className='flex gap-4'>
+              <button
+                className='cursor-pointer bg-gray-500 text-white px-6 py-2 rounded shadow hover:bg-gray-400 transition-colors w-1/2'
+                onClick={() => setSelectedSkip(null)}
+              >
+                Back
+              </button>
+              <button
+                className='cursor-pointer bg-yellow-500 text-white px-6 py-2 rounded shadow hover:bg-yellow-600 transition-colors w-1/2'
+                onClick={() => alert(`Proceeding with ${skip.size} Yard Skip`)}
+              >
+                Continue
+              </button>
+            </div>
+
+            <small className='text-xs md:text-sm text-gray-400'>
+              Imagery and information shown throughout this website may not reflect the exact shape or size specification, colours may vary, options and/or accessories may be featured at additional cost.
+            </small>
           </div>
         </div>
-
-        <small className='text-xs md:text-sm text-gray-400'>
-          Imagery and information shown throughout this website may not reflect the exact shape or size specification, colours may vary, options and/or accessories may be featured at additional cost.
-        </small>
       </div>
     </div>
   )

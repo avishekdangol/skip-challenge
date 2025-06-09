@@ -37,17 +37,17 @@ function Skips() {
       </div>
 
       {/* Filters */}
-      <div className="mb-6 text-right">
+      <div className='mb-6 text-right'>
         <select
-          id="sort-filter"
-          className="border border-gray-300 rounded bg-white text-black p-2"
+          id='sort-filter'
+          className='border border-gray-300 rounded bg-white text-black p-2'
           onChange={sortSkips}
         >
-          <option value="">Sort by</option>
-          <option value="price-asc">Price: Lowest to Highest</option>
-          <option value="price-desc">Price: Highest to Lowest</option>
-          <option value="size-asc">Size: Small to Large</option>
-          <option value="size-desc">Size: Large to Small</option>
+          <option value=''>Sort by</option>
+          <option value='price-asc'>Price: Lowest to Highest</option>
+          <option value='price-desc'>Price: Highest to Lowest</option>
+          <option value='size-asc'>Size: Small to Large</option>
+          <option value='size-desc'>Size: Large to Small</option>
         </select>
       </div>
 
